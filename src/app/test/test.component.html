@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="col-md-6">
+        <input class="form-control mb-2" name="title"[(ngModel)]="title">
+        <button class="btn btn-primary" (click)="submit()">submit</button>
+    </div>
+    <div class="col-md-6">
+        <div class="d-flex justify-content-between mb-2"  *ngFor="let title of toDoList;index as i">
+        <div>{{i + 1}}.{{title}} </div>
+        <div><button class="btn btn-danger" (click)="delete(i)">delete</button></div>
+        </div>
+    </div>
+</div>
